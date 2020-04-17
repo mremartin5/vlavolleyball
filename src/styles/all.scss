@@ -1,0 +1,99 @@
+@import '_colors';
+@import '_fonts';
+@import '_navbar';
+@import '_slideshow';
+@import '_schedule';
+
+.body {
+    margin: 10px auto;
+    background: $white;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Teko', sans-serif;
+    color: $vla_red;
+    text-align: center;
+}
+
+.news-flash {
+    color: $white;
+    font-size: 1.25rem;
+    font-family: 'Teko', sans-serif;
+    text-align: center;
+    &:hover {
+        color: $vla_gray;
+        text-decoration: none;
+    }
+    .row {
+        background: $vla_blue;
+        .col {
+            margin: 5px 0;
+        }
+    }
+  }
+  
+.hd-body {
+    margin: 15px auto 0 auto;
+    padding: 0;
+    border-bottom: 1px solid rgba($vla_gray,.5);
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container100 {
+    max-width: 100%;
+}
+
+.h1 {
+    color: $vla_red;
+}
+
+.col {
+    margin: 15px 0;
+}
+
+.main-section .row-container:nth-child(even) {
+    background: rgba($vla_blue,.05);
+}
+
+.bg-schedule {
+    background: rgba($vla_gray,.2);
+}
+
+.clear {
+    clear: both;
+}
+
+.powrMark .blog .text-center .pad-m .pad-top-l {
+  display: none !important;
+}
+
+.footer-icons {
+  background: $vla_blue;
+    .col {
+      text-align: center;
+      a {
+        color: $white;
+        i {
+          font-size: 2rem;
+        }
+        &:hover {
+          color: $vla_gray;
+        }
+      }
+    }
+}
+
+.footer {
+  padding: 15px;
+  background: $vla_blue;
+  h4 {
+    margin: 0 auto;
+    font-size: 1rem;
+    color: $white;
+  }
+}

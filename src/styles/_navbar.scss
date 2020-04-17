@@ -1,0 +1,39 @@
+@import '_colors';
+
+.nav-bar {
+    margin: 0 auto;
+    padding: 0;
+    background: $white;
+    box-shadow: 0 5px 10px rgba($black,.25);
+}
+.navbar-nav {
+    font-size: .90rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    .dropdown-menu {
+        font-size: .90rem;
+    }
+}
+
+.vlaLogo {
+    transition: all ease 0.2s;
+    -webkit-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+}
+
+// .vlaLogo {
+//     background: url(../assets/images/vla_logo_color.png);
+//     width: 138px;
+//     height: 60px;
+//     background-repeat: no-repeat;
+//     background-size: 138px 60px;
+// }
+
+// .vlaLogoSm {
+//     background: url(../assets/images/vla_logo_color.png);
+//     width: 92px;
+//     height: 40px;
+//     background-repeat: no-repeat;
+//     background-size: 92px 40px;
+// }

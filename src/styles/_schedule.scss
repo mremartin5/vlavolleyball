@@ -1,0 +1,99 @@
+.hd {
+    margin: 0 !important;
+    color: $white;
+    text-transform: uppercase;
+    font-family: 'Teko', sans-serif;
+}
+
+.eventHd {
+    padding: 10px !important;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    background: $vla_blue;
+    .eventDates {
+        font-size: 1.25rem;
+    }
+}
+
+.subHd {
+    margin: 0 !important;
+    color: $white;
+    text-transform: uppercase;
+    padding: 5px 10px !important;
+    font-size: .85rem;
+    font-weight: 600;
+    &:after {
+        font-family: 'Font Awesome 5 Free';
+        content: '\f107';
+        font-weight: 900;
+        float: right;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.dateHd {
+    background: rgba($vla_blue,.75);
+}
+
+.timeHd {
+    padding: 0 !important;
+    .nav {
+        .col {
+            margin: 0;
+            padding: 0;
+            a {
+                color: $white;
+                text-align: center;
+                background: $vla_gray;
+                &.active {
+                    color: $vla_blue;
+                    background: $white;
+                    &:before {
+                        font-family: 'Font Awesome 5 Free';
+                        content: '\f107';
+                        font-weight: 900;
+                        float: right;
+                    }
+                    &:hover {
+                        color: $vla_blue;
+                        background: $white;
+                    }
+                }
+                &:hover {
+                    color: rgba($vla_blue,.25);
+                    background: rgba($vla_gray,.5);
+                }
+            }
+        }
+    }
+}
+
+.toggleArrow:after {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f105';
+    font-weight: 900;
+    float: right;
+}
+
+.event {
+    margin: 15px 0;
+    background: $white;
+}
+
+.matchInfo {
+    background: $white;
+    .table {
+        margin: 10px 10px 0 10px;
+        padding: 0;
+        line-height: 50px;
+        tr {
+            td {
+                padding: 5px 0;
+                border: none;
+            }
+        }
+    }
+}
+  

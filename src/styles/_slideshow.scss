@@ -1,0 +1,32 @@
+@import '_colors';
+
+.slideShow {
+    margin: 0 0 15px 0;
+    background: rgba($vla_blue, .5);
+}
+
+.carousel {
+    .carousel-inner {
+        min-height: 400px;
+        .carousel-item {
+            img {
+                max-height: 400px;
+            }
+            .carousel-caption {
+                padding: 10px;
+                h3 {
+                    color: $white;
+                }
+                p {
+                    padding: 5px;
+                    background: rgba($vla_blue,.75);
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    a.carousel-control-prev, a.carousel-control-next {
+        width: 10%;
+    }
+}
+
