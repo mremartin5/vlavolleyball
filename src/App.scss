@@ -1,0 +1,15 @@
+@import 'styles/all';
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background: $vla_red;
+}
+
+a {
+  &:hover {
+    transition: all ease 0.2s;
+    -webkit-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+  }
+}
