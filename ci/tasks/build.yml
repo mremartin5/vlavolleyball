@@ -1,0 +1,20 @@
+platform: linux
+image_resource:
+    type: docker-image
+    source:
+        repository: node
+        tag: 13.12.0-alpine
+
+inputs:
+    - name: source-to-build
+outputs:
+    - name: source-to-build
+run:
+    path: /bin/sh
+    args:
+    - -exc
+    - |
+        cd source-to-build/
+        ls
+        yarn install
+        yarn test

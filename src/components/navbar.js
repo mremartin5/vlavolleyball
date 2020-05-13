@@ -1,30 +1,38 @@
-import React, { useGlobal, useState, useEffect } from 'reactn';
+import React, { useGlobal } from 'reactn';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import Loading from '../components/partials/_loading';
 import logo from '../assets/images/vla_logo_color.svg';
 
-const NavBar = (props) => {
+const NavBar = () => {
 
     const [nav] = useGlobal('nav');
-    const [logoHeight, setLogoHeight] = useState('60');
+    // const [logoHeight, setLogoHeight] = useState('60');
 
-    const listenScrollEvent = event => {
-        if (window.scrollY < 85) {
-            return setLogoHeight('60');
-        } else if (window.scrollY > 80) {
-            return setLogoHeight('40');
-        }
-    };
+    const [isLoading] = useGlobal('isLoading');
 
-    useEffect(() => {
-        window.addEventListener('scroll', listenScrollEvent);
-        return () => window.removeEventListener('scroll', listenScrollEvent);
-    }, []);
+    // const listenScrollEvent = event => {
+    //     if (window.scrollY < 85) {
+    //         return setLogoHeight('60');
+    //     } else if (window.scrollY > 80) {
+    //         return setLogoHeight('40');
+    //     }
+    // };
+
+    // useEffect(() => {
+    //     window.addEventListener('scroll', listenScrollEvent);
+    //     return () => window.removeEventListener('scroll', listenScrollEvent);
+    // }, []);
 
     return (
         <Navbar collapseOnSelect expand='lg' className='nav-bar' sticky='top'>
             <Container>
                 <Navbar.Brand href='/'>
-                    <img src={logo} height={logoHeight} className='d-inline-block align-top vlaLogo' alt='VLA - Volleyball League of America'/>
+                    <img src={logo} height='60' className='d-inline-block align-top vlaLogo' alt='VLA - Volleyball League of America'/>
+                    { isLoading &&
+                        <div className='loading-animation'>
+                            <Loading />
+                        </div>
+                    } 
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse id='responsive-navbar-nav'>
@@ -50,4 +58,4 @@ const NavBar = (props) => {
         
     )
 }
-export default NavBar
+export default NavBar;

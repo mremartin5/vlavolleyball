@@ -1,2 +1,5 @@
 # .gitignore 
 node_modules
+vla
+vla.pub
+ci/credentials.yml

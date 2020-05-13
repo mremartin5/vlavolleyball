@@ -1,13 +1,24 @@
-### VLAVOLLEYBALL
-npx create-react-app vlavolleyball
-yarn add reactn
-yarn add react-bootstrap bootstrap
-yarn add react-router
-yarn add node-sass
-yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
-npm install history
+# VLAVOLLEYBALL
+- npx create-react-app vlavolleyball
+- yarn add reactn
+- yarn add react-bootstrap bootstrap
+- yarn add react-router
+- yarn add node-sass
+- yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+- npm install history
 
+## RESOURCES/LINKS
+SSH
+- https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+- run: `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"` (GitHub email address)
+- github repo > settings tab > Deploy keys
 
+Docker
+- create dockerfile that has technologies needed to run the app/ui
+- run: `docker pull nginx` (pulls latest docker nginx image)
+- run: `docker build -t REPOSITORY-NAME:TAG-NAME .`
+- (repository-name: pmt-ui, tag-name: master/develop)
+- run: `docker run -p PORT REPOSITORY-NAME` (port should be same as environment redirect, docker run -p 80:8088 --name vla-ui)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

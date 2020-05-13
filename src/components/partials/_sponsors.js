@@ -11,7 +11,10 @@ const Sponsors = () => {
                 <h2 className='hd-body'>VLA Sponsors</h2>
             </Row>
             <Row>
-                {
+                { !sponsors &&
+                    <Col className='hd eventHd'>No Data at this time.</Col>
+                }
+                { sponsors &&
                     sponsors.map( (s, key) => (
                         <Col key={key} className='center'>
                             <img src={require('../../assets/images/vla_sponsor_' + s.name + '.png')} alt={s.fullName} width='200'/>

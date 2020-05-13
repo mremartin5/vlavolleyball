@@ -22,6 +22,16 @@
     -moz-transition: all ease 0.2s;
 }
 
+.loading-animation {
+    display: inline;
+    line-height: 60px;
+}
+
+.spinner-details {
+    color: $vla_red;
+    opacity: .5;
+}
+
 // .vlaLogo {
 //     background: url(../assets/images/vla_logo_color.png);
 //     width: 138px;

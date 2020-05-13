@@ -1,0 +1,47 @@
+jobs:
+    - name: build-test-vla-ui
+        serial: true
+        plan:
+            - get: vla-ui
+                trigger: true
+            - task: build-test
+                input_mapping: {source-to-build: vla-ui}
+                file: vla-ui/ci/tasks/build.yml
+            - get: version
+                params: {pre: rc}
+            - put: docker-release
+                params:
+                    build: vla-ui
+                    tag: version/version
+            - put: version
+                params: {file: version/version}
+
+
+resources:
+    - name: vla-ui
+        type: git
+        source:
+            uri: git@github.com:mremartin5/vlavolleyball.git
+            branch: master
+            private_key: ((git-private-key))
+        check_every: 1h
+        # create for Dockerhub?
+        webhook_token: ((vla-ui-webhook-token))
+
+    - name: docker-release
+        type: docker-image
+        source:
+            email: ((docker-hub-email))
+            username: ((docker-hub-username))
+            password: ((docker-hub-password))
+            repository: ((docker-hub-username))/vla-ui
+
+    - name: version
+        type: semver
+        source:
+            driver: git
+            uri: git@github.com:mremartin5/vlavolleyball.git
+            file: version
+            branch: version
+            initial_version: 0.0.1
+            private_key: ((git-private-key))

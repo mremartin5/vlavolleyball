@@ -35,7 +35,6 @@ h1, h2, h3, h4 {
 .hd-body {
     margin: 15px auto 0 auto;
     padding: 0;
-    border-bottom: 1px solid rgba($vla_gray,.5);
 }
 
 .center {
@@ -68,9 +67,29 @@ h1, h2, h3, h4 {
     clear: both;
 }
 
-//  .blog .pad-m .pad-top-l .powrMark .text-center  {
-//   display: none !important;
-// }
+.instagram {
+  margin: 15px 0;
+  border: none;
+  width:100%;
+}
+
+.instagram > .widget-container > .embed-pagination {
+  li {
+    background: $vla_red !important;
+  }
+}
+
+.subscribe {
+  border-top: 1px solid rgba($vla_gray,.2);
+  margin: 15px 0 0 0;
+  button {
+    background: $vla_blue;
+  }
+}
+
+.g-recaptcha > div {
+  margin: 0 auto;
+}
 
 .footer-icons {
   background: $vla_blue;
@@ -90,6 +109,7 @@ h1, h2, h3, h4 {
 
 .footer {
   padding: 15px;
+  color: $white;
   background: $vla_blue;
   h4 {
     margin: 0 auto;

@@ -12,7 +12,10 @@ const Teams = () => {
                 <h2 className='hd-body'>VLA Teams</h2>
             </Row>
             <Row>
-                {
+                { !teams &&
+                    <Col className='center'>No Data at this time.</Col>
+                }
+                { teams &&
                     teams.map( (t, key) => (
                         <Col key={key} className='center'>
                             <Link to={'/teams/' + t.linkName}>

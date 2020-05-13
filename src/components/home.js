@@ -7,7 +7,7 @@ import Teams from './partials/_teams';
 import Partners from './partials/_partners';
 import Sponsors from './partials/_sponsors';
 import Instagram from './partials/_instagram';
-import Footer from './partials/_footers';
+import Footer from './footer';
 
 const Home = () => {
 
