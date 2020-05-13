@@ -51,7 +51,7 @@ const Subscribe = (props) => {
                 setVerified(true);
             })
             .catch(error => {
-                // setError(JSON.stringify(error));
+                setError(JSON.stringify(error));
                 console.error('There was an error!', error);
             });
     }
