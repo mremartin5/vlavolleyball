@@ -15,6 +15,7 @@ SSH
 
 Docker
 - create dockerfile that has technologies needed to run the app/ui
+- run: `docker login` (enter username/password)
 - run: `docker pull nginx` (pulls latest docker nginx image)
 - run: `docker build -t REPOSITORY-NAME:TAG-NAME .`
 - (repository-name: pmt-ui, tag-name: master/develop)
